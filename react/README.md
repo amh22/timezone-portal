@@ -1,4 +1,4 @@
-# TimeZone Solana GIF Portal Project
+# TimeZone Solana GIF Portal Project - REACT Frontend
 
 ### **Welcome 👋**
 
