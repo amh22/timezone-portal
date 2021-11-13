@@ -135,7 +135,7 @@ const App = () => {
               <img src='https://media.giphy.com/media/KY2ZMhnCxP008/giphy.gif' alt='Space Invader' />
             </div>
             <div>
-              <p className='header'>TimeZone Portal</p>
+              <p className='header'>Arcadia</p>
             </div>
             <div className='gif-item-header' style={{ display: 'flex', width: '70px', padding: '0px 25px' }}>
               <img src='https://media.giphy.com/media/KY2ZMhnCxP008/giphy.gif' alt='Space Invader' />
@@ -156,7 +156,7 @@ const App = () => {
                 href={TWITTER_LINK}
                 target='_blank'
                 rel='noreferrer'
-              >{`built on @${TWITTER_HANDLE}`}</a>
+              >{`built by @${TWITTER_HANDLE}`}</a>
             </div>
           </div>
         </div>
