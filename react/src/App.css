@@ -95,7 +95,7 @@
   grid-gap: 3rem;
   justify-items: center;
   margin: 0 -110px;
-  padding: 45px;
+  padding: 45px 45px 135px 45px;
 }
 
 .gif-grid .gif-item {

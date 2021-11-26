@@ -107,7 +107,13 @@ const App = () => {
               sendGif()
             }}
           >
-            <input type='text' placeholder='Enter gif link!' value={inputValue} onChange={onInputChange} />
+            <input
+              type='text'
+              placeholder='Enter gif link!'
+              value={inputValue}
+              onChange={onInputChange}
+              style={{ color: '#24292e' }}
+            />
             <button type='submit' className='cta-button submit-gif-button'>
               Submit
             </button>
@@ -175,6 +181,7 @@ const App = () => {
       console.log('GIF successfully sent to program', inputValue)
 
       await getGifList()
+      setInputValue('')
     } catch (error) {
       console.log('Error sending GIF:', error)
     }
@@ -213,7 +220,7 @@ const App = () => {
   return (
     <div className='App'>
       <div className={walletAddress ? 'authed-container' : 'container'}>
-        <div className='header-container'>
+        <div className='header-container' style={{ border: '1px solid red' }}>
           <div
             style={{
               display: 'flex',
@@ -232,7 +239,8 @@ const App = () => {
               <img src='https://media.giphy.com/media/KY2ZMhnCxP008/giphy.gif' alt='Space Invader' />
             </div>
           </div>
-          <p className='sub-text'>View your GIF collection in the metaverse ✨</p>
+          <p className='sub-text'>A collection Arcade Game GIF's in the metaverse ✨</p>
+          <p className='sub-text'>Add your favourite to the collection!</p>
           {!walletAddress && renderNotConnectedContainer()}
           {walletAddress && renderConnectedContainer()}
         </div>
