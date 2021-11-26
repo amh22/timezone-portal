@@ -107,16 +107,30 @@ const App = () => {
               sendGif()
             }}
           >
-            <input
-              type='text'
-              placeholder='Enter gif link!'
-              value={inputValue}
-              onChange={onInputChange}
-              style={{ color: '#24292e' }}
-            />
-            <button type='submit' className='cta-button submit-gif-button'>
-              Submit
-            </button>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                margin: 'auto',
+                flexWrap: 'wrap',
+              }}
+            >
+              <div style={{ display: 'flex' }}>
+                <input
+                  type='text'
+                  placeholder='Enter gif link!'
+                  value={inputValue}
+                  onChange={onInputChange}
+                  style={{ color: '#24292e', width: '350px', margin: '20px 20px' }}
+                />
+              </div>
+              <div style={{ display: 'flex' }}>
+                <button type='submit' className='cta-button submit-gif-button'>
+                  Submit
+                </button>
+              </div>
+            </div>
           </form>
           <div className='gif-grid'>
             {/* We use index as the key instead, also, the src is now item.gifLink */}
@@ -220,7 +234,7 @@ const App = () => {
   return (
     <div className='App'>
       <div className={walletAddress ? 'authed-container' : 'container'}>
-        <div className='header-container' style={{ border: '1px solid red' }}>
+        <div className='header-container'>
           <div
             style={{
               display: 'flex',

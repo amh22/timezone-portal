@@ -1,3 +1,9 @@
+@media only screen and (max-width: 600px) {
+  .gif-input {
+    background-color: lightblue;
+  }
+}
+
 .App {
   height: 100vh;
   background-color: #000;
@@ -91,11 +97,11 @@
 
 .gif-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 3rem;
   justify-items: center;
-  margin: 0 -110px;
-  padding: 45px 45px 135px 45px;
+  /* margin: 0 -110px; */
+  padding: 45px 0px 135px 0px;
 }
 
 .gif-grid .gif-item {
@@ -137,4 +143,10 @@
 
 .connected-container button {
   height: 50px;
+}
+
+.gif-input {
+  color: #24292e;
+  width: 300px;
+  margin: 20px;
 }
