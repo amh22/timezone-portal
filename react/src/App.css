@@ -120,6 +120,12 @@
   object-fit: cover;
 }
 
+.gif-item p {
+  width: 300px;
+  color: white;
+  contain: content;
+}
+
 .gif-item-header img {
   width: 100%;
   height: 70px;

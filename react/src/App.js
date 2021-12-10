@@ -1,5 +1,6 @@
 import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js'
 import { Program, Provider, web3 } from '@project-serum/anchor'
+import MiddleEllipsis from 'react-middle-ellipsis'
 import idl from './idl.json'
 import kp from './keypair.json'
 import { useEffect, useState } from 'react'
@@ -136,7 +137,15 @@ const App = () => {
             {/* We use index as the key instead, also, the src is now item.gifLink */}
             {gifList.map((item, index) => (
               <div className='gif-item' key={index}>
-                <img src={item.gifLink} alt={item.gifLink} />
+                <div>
+                  <img src={item.gifLink} alt={item.gifLink} />
+                </div>
+                <div style={{ width: '300px', color: 'white' }}>
+                  <p>Submitted by:</p>
+                  <MiddleEllipsis>
+                    <span>{item.userAddress.toString()}</span>
+                  </MiddleEllipsis>
+                </div>
               </div>
             ))}
           </div>
@@ -253,7 +262,7 @@ const App = () => {
               <img src='https://media.giphy.com/media/KY2ZMhnCxP008/giphy.gif' alt='Space Invader' />
             </div>
           </div>
-          <p className='sub-text'>A collection Arcade Game GIF's in the metaverse ✨</p>
+          <p className='sub-text'>A collection of Arcade Game GIF's in the metaverse ✨</p>
           <p className='sub-text'>Add your favourite to the collection!</p>
           {!walletAddress && renderNotConnectedContainer()}
           {walletAddress && renderConnectedContainer()}
